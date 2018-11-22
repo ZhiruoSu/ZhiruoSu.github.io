@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>math puzzle</title>
+<style>
+body {
+    background-color: powderblue
+}
+h1 {
+    color: black;
+    font-family: verdana;
+    font-size: 300%;
+    text-align:center;
+}
+input{
+    text-align:center
+}
+</style>
+<script type="text/javascript">
+   function addNumber(){
+
+      var a = parseInt(document.getElementById("one").value);
+
+      var b = parseInt(document.getElementById("two").value);
+
+      var c = a + b;
+
+      document.getElementById("three").value = c;
+   }
+</script>
+</head>
+<body>
+
+<h1>
+This is a math puzzle
+</h1>
+<input type="text" id="one"/>
+   <label> + </label>
+   <input type="text" id="two"/>
+   <label> = </label>
+   <input type="text" id="three"/>
+   <input type="button" value="求解" onclick="addNumber()"/>
+
+</body>
+</html>
