@@ -125,17 +125,7 @@ $(document).ready(function(){
                     ] // rmf columns
                 } ); // end dataTable
 
-                var chart = c3.generate({
-                     data: {
-                         columns: table2_dataSet,
-                         type : 'bar'
-                     },
-                     bar: {
-                         title: "Tasks for Each Stage:",
-                     }
-                 });
-
-          }); // end .getJSON
+                }); // end .getJSON
        }); // end button
 
         // $.getJSON('http://localhost/d756a/data_export.json/Computer+TV', function(obj) {
