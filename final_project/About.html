@@ -21,18 +21,8 @@
   <!-- CSS dependencies -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="wireframe.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
-    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
-    </script>
-    <style type="text/css">
-      body {
-        padding: 0;
-        margin: 0;
-      }
-      html, body, .container, .row, .col-xs-12, .col-sm-12, .col-md-12, #map {
-        height: 100%;
-      }
-    </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
 </head>
 
 <body class="bg-dark" style="">
@@ -104,30 +94,17 @@
       <div class="row">
         <div class="col-md-12">
           <div class="py-5">
-            <div id="map"></div>
-            <script>
-     var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
-
-     var map = L.map('map')
-           .addLayer(mapboxTiles)
-           .setView([22.287111, 114.191667], 13);
-
-     var items = [];
-     var airtable_read_endpoint = "https://api.airtable.com/v0/appM38HXlEVhxmnqx/venues?api_key=keyTcsTzckqyBTlk8&sortField=_createdTime&sortDirection=desc";
-     var data = [];
-     $.getJSON(airtable_read_endpoint, function(result) {
-            $.each(result.records, function(key,value) {
-                items = {};
-                    items["name"] = value.fields.Name;
-                    items["url"] = value.fields.url;
-                    items["image_url"] = value.fields.image_url;
-                    items["latitud"] = value.fields.Lat;
-                    items["longitud"] = value.fields.Lng;
-                    data.push(items);
-                    console.log(items);
-             }); // end .each
-     }); // end getJSON
-     </script>
+            <div id="map" style="width: 1000px; height: 1000px" class="pl-5 ml-5"></div>
+            <script style="">
+              var mapboxTiles = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>',
+                maxZoom: 18,
+              })
+              var map = L.map('map').addLayer(mapboxTiles).setView([32.391145, 119.448093], 14);
+              var marker = L.marker([32.391145, 119.448093], {
+                draggable: true
+              }).bindPopup('<a href="index.html">九遂堂 电话：13773543311 地址：江苏省扬州市皮市街96号</a>').addTo(map);
+            </script>
           </div>
         </div>
       </div>
