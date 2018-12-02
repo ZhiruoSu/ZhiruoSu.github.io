@@ -30,15 +30,15 @@ $theme-colors: (
   danger: #dc3545
 );
 
-$body-bg: white;
-$body-color: #333;
+
+$body-color: #FFFFFF;
 
 
 $body-color-inverse: invert($body-color) !default;
 $link-color: #8e8e8e;
 
 // Fonts
-$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-base: Georgia, serif;
 $headings-font-family: $font-family-base;
 $display-font-family: $font-family-base;
 $font-weight-normal: 200;
@@ -53,6 +53,8 @@ $font-weight-bold: 700;
 $font-weight-base: $font-weight-normal;
 $line-height-base: 1.5;
 $headings-line-height: 1.2;
+$body-bg: black;
+
 
 @import 'bootstrap-4.1.3';
 
