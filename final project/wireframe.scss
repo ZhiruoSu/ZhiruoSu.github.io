@@ -22,7 +22,7 @@ $enable-print-styles:       true;
 $theme-colors: (
   primary: #cdcdcd,
   secondary: #b0b0b0,
-  light: #FFFFFF,
+  light: #eaeaea,
   dark: #000000,
   info: #8e8e8e,
   success: #28a745,
@@ -35,7 +35,7 @@ $body-color: #FFFFFF;
 
 
 $body-color-inverse: invert($body-color) !default;
-$link-color: white;
+$link-color: #8e8e8e;
 
 // Fonts
 $font-family-base: Georgia, serif;
