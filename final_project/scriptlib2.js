@@ -12,9 +12,9 @@ $(document).ready(function(){
                        items.push(value.fields.Ending);
                        items.push(value.fields.Authers);
                        items.push(value.fields.Numbers);
-                      items.push(value.fields.Work_number);
-                      items.push(value.fields.Dealing_Authers);
-                      items.push(value.fields.Work_names);
+                       items.push(value.fields.Work_number);
+                       items.push(value.fields.Dealing_Authers);
+                       items.push(value.fields.Work_names);
                        dataSet.push(items);
                 }); // end .each
              $('#example').DataTable( {
