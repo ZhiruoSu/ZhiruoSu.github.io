@@ -1,0 +1,42 @@
+<div class="container">
+   <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <center><button type="button" class="btn btn-warning" id='roll_up' onclick="show_districts();">显示地点</button><br></center>
+       <div id="map"></div>
+       </div><!-- column -->
+   </div><!-- row -->
+</div>
+<script>
+  var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
+
+  var map = L.map('map')
+        .addLayer(mapboxTiles)
+        .setView([32.391083, 119.448028], 13);
+        var items = [];
+  var airtable_read_endpoint = "https://api.airtable.com/v0/appUwOQKd0Kku9GKa/Table%201?api_key=keysRMqAr4ctpyQFx";
+  var data = [];
+  $.getJSON(airtable_read_endpoint, function(result) {
+         $.each(result.records, function(key,value) {
+             items = {};
+                 items["Name"] = value.fields.Name;
+                 items["image"] = value.fields.URL;
+                 items["latitud"] = value.fields.Latitude;
+                 items["address"] = value.fields.address;
+                 items["longitud"] = value.fields.Longitude;
+                 data.push(items);
+                 console.log(items);
+          }); // end .each
+  }); // end getJSON
+  </script>
+
+  <script>
+  function show_districts(){
+
+    for (var i in data) {
+        var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
+        L.marker( latlng )
+            .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].URL+'" width = "80px"><br>'+data[i].Name + '</a>' )
+            .addTo(map);
+    }
+  }
+  </script>
