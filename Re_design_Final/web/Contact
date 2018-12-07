@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>九遂堂艺术馆_往期展览</title>
+  <!--/metadata -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="艺术展览，扬州，江苏，艺术设计，艺术推介，艺术家，推广，传媒">
+  <script type="application/x-javascript">
+    addEventListener("load", function() {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+  </script>
+  <!-- //custom-theme -->
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+  <!-- font-awesome-icons -->
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="">
+  <link href="css/lsb.css" rel="stylesheet" type="text/css"><!-- gallery -->
+  <!-- //font-awesome-icons -->
+  <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+</head>
+<body>
+  <!-- header -->
+  <div class="header" id="home">
+    <div class="agileits_top_menu">
+      <div class="w3l_header_left">
+        <ul>
+          <li><i class="fa fa-phone" aria-hidden="true"></i> +86 13773543311</li>
+        </ul>
+      </div>
+      <div class="w3l_header_right">
+        <div class="w3ls-social-icons text-left">
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div class="content white agile-info">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="images/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+              <h2>九遂堂艺术馆</h2>
+              </a></div><a class="navbar-brand" href="index.html">
+            <!--/.navbar-header-->
+            </a>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <a class="navbar-brand" href="index.html">
+              </a>
+              <nav class="link-effect-2" id="link-effect-2"><a class="navbar-brand" href="index.html">
+                </a>
+                <ul class="nav navbar-nav navbar-right"><a class="navbar-brand" href="index.html">
+                  </a>
+                  <li class="active"><a class="navbar-brand" href="index.html"></a><a href="index.html" class="effect-3 scroll">主页</a></li>
+                  <li><a href="#gallery" class="effect-3 scroll">往期展览</a></li>
+                  <li><a href="#contact" class="effect-3 scroll">联系我们</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!--/.navbar-collapse-->
+            <!--/.navbar-->
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footer-bot wow fadeInRight animated" data-wow-delay=".5s">
+      <div class="container">
+        <div class="logo2">
+          <h3><a href="index.html">九遂堂艺术馆</a></h3>
+        </div>
+        <div class="ftr-menu">
+          <ul>
+            <li><a class="scroll" href="#home">主页 </a></li>
+            <li><a class="scroll" href="#gallery">往期展览</a></li>
+            <li><a class="scroll" href="#contact">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="copy-right wow fadeInLeft animated" data-wow-delay=".5s">
+      <div class="container">
+        <p> © 2018 Corp Deal </p>
+      </div>
+    </div>
+    <!-- //footer -->
+</body>
+</html>
