@@ -64,6 +64,27 @@
       </div>
     </div>
   </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <center>
+            <div id="map" style="width: 600px; height: 400px"></div>
+            <script style="">
+              var mapboxTiles = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>',
+                maxZoom: 18,
+              })
+              var map = L.map('map').addLayer(mapboxTiles).setView([32.391056, 119.448037], 14);
+              var marker = L.marker([32.391056, 119.448037], {
+                draggable: true
+              }).bindPopup('<a href="index.html">九遂堂</a>').addTo(map);
+            </script>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-md-12 my-3">
