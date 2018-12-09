@@ -14,7 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="css/Untitled.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+  <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
 </head>
 
 <body>
@@ -69,6 +71,16 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
+          <center><div id="map" style="width: 600px; height: 400px"></div></center>
+          <script>
+              var mapboxTiles = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,})
+              var map = L.map('map')
+                    .addLayer(mapboxTiles)
+                    .setView([32.391088, 119.448006], 14);
+              var marker = L.marker([32.391088, 119.448006], {draggable: true})
+                    .bindPopup( '<a href="index.html" target="_blank">九遂堂</a>')
+                    .addTo(map);
+          </script>
         </div>
       </div>
     </div>
